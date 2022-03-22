@@ -8,7 +8,7 @@ if role=='developer':
     if(exprience >=5):
         print('Senior developer')
 '''to make simple we can use chained conditional'''
-A person  is   senior developer only if role is developer and his exprience  is greater than five so we use androle="devloper"
+#A person  is   senior developer only if role is developer and his exprience  is greater than five so we use androle="devloper"
 role="devloper"
 exprience=6
 if role=="developer" and exprience>=5:

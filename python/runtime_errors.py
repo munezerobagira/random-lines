@@ -4,6 +4,6 @@ def runtime_error(n):
          print('Done.')
     else:
         print("I will be diplayed  until computer rejects me")
-        runtime_error(n-1)
+        runtime_error(n+1)
 # Calling the function that couse runtime
 runtime_error(5)

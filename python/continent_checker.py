@@ -26,8 +26,8 @@ def continent_checker(continent, name):
     elif(continent=="Africa"):
         print(f"Oooh, I know lions.  {name}, You are from Africa")
     elif(continent=="Asia"):
-        print(f"Oooh, I know lions.  {name}, You are from Africa")
-    elif(continent==""):
+        print(f"Oooh, I know kungfu.  {name}, You are from Asia")
+    elif(continent=="Antarctica"):
         print(f"Oooh, its interesting to meet iceman.  {name}, You are from Antarctica")
     else:
         print(f"Oooh I know the Santa. {name}, You are from the moon")

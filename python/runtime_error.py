@@ -1,4 +1,4 @@
-def recurse():
+def recurse(a):
     if (a == 0):
         print(a)
     else:

@@ -1,9 +1,11 @@
+import time
 # A function to count down
 def countdown(n):
      if n <= 0:
           print('Blastoff!')
      else:
           print(n)
+          time.sleep(1)
           countdown(n-1)
 # A function to count up
 def countup(n):
@@ -11,6 +13,7 @@ def countup(n):
         print("Blastoff!")
     else:
         print(n)
+        time.sleep(1)
         countup(n+1)
 
 # Input the numbe from user using input
