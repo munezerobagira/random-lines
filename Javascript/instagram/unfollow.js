@@ -1,7 +1,6 @@
 let counter = 0;
-
-setInterval(() => {
-  const scrollTarget = document.querySelector("div.isgrP");
+const unfollow = () => {
+  const scrollTarget = document.querySelector("div._a3gq");
   if (scrollTarget) {
     console.log(scrollTarget);
     scrollTarget.scroll(900 * counter, 900 * counter);
@@ -56,4 +55,7 @@ setInterval(() => {
       handleClick(fliteredButtons);
     }
   }
-}, 960000);
+};
+//For the first time
+unfollow();
+setInterval(unfollow, 960000);
