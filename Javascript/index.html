@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Combine 2 json</h1>
+    <form id="combine-array">
+      <label for="">Array 1</label>
+      <textarea name="arr1" rows="15" rows="100"></textarea>
+      <br />
+      <label for="">Array 2</label>
+      <textarea name="arr2" rows="15" rows="100"></textarea>
+      <br />
+      <label for="">Object identifier</label>
+      <input name="identifier" />
+      <br />
+      <label>Generate id</label>
+      <input type="checkbox" value="Combine" name="add" />
+      <input type="submit" value="submit" />
+      <br />
+      <textarea name="result"></textarea>
+    </form>
+    <script src="mergeObject.js"></script>
+    <script>
+      const formObject = document.getElementById("combine-array");
+      formObject.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const arr1 = JSON.parse(formObject.arr1.value || "{}");
+        const arr2 = JSON.parse(formObject.arr2.value || "{}");
+        formObject.result.value = JSON.stringify(
+          mergeTo(arr1, arr2, formObject.identifier.value, )
+        );
+      });
+    </script>
+  </body>
+</html>
