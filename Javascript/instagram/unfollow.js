@@ -1,6 +1,6 @@
 let counter = 0;
 const unfollow = () => {
-  const scrollTarget = document.querySelector("div._a3gq");
+  const scrollTarget = document.querySelector("div._aano");
   if (scrollTarget) {
     console.log(scrollTarget);
     scrollTarget.scroll(900 * counter, 900 * counter);
@@ -11,13 +11,8 @@ const unfollow = () => {
     // This code worked for me if doesn't work for you just fire an issues, we can work on it
     buttons = document.querySelectorAll("button");
     document.querySelectorAll("button").forEach((element) => {
-      let childNodes = element.children;
-      if (
-        childNodes &&
-        childNodes[0] &&
-        childNodes[0].innerHTML &&
-        childNodes[0].innerHTML == "Following"
-      )
+      let childNodes = element.children[0].children;
+      if (childNodes && childNodes[0] && childNodes[0].innerHTML && childNodes[0].innerHTML == "Following")
         fliteredButtons.push(element);
     });
     if (fliteredButtons && fliteredButtons.length > 0) {
@@ -34,14 +29,12 @@ const unfollow = () => {
           const unfollowButton = await new Promise((resolve, reject) => {
             let interval = setInterval(() => {
               //Scan for the pop
-              document
-                .querySelectorAll("button[tabindex]")
-                .forEach((element) => {
-                  if (element.innerHTML == "Unfollow") {
-                    clearInterval(interval);
-                    return resolve(element);
-                  }
-                });
+              document.querySelectorAll("button[tabindex]").forEach((element) => {
+                if (element.innerHTML == "Unfollow") {
+                  clearInterval(interval);
+                  return resolve(element);
+                }
+              });
             }, 100);
             setTimeout(reject, maxDelay);
           });
